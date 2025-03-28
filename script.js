@@ -1,3 +1,4 @@
+
 function toonAdvies() {
     const gevoeligheid = document.getElementById("gevoeligheid").value;
     const toegang = document.getElementById("toegang").value;
@@ -6,34 +7,37 @@ function toonAdvies() {
     const adviesText = document.getElementById("advies-text");
     const resultaatDiv = document.getElementById("resultaat");
 
-    let advies = "Kies een opslagoptie die past bij je behoeften.";
+    let adviezen = [];
 
-    if (gevoeligheid === "hoog" && toegang === "privé") {
-        if (grootte === "klein") {
-            advies = "Gebruik een versleutelde cloudopslag zoals OneDrive of iCloud met extra encryptie.";
-        } else {
-            advies = "Gebruik een beveiligde netwerkschijf of een NAS met encryptie.";
-        }
+    // 🔹 Add matching options dynamically instead of requiring all selections
+
+    if (gevoeligheid === "hoog") {
+        adviezen.push("Gebruik een versleutelde cloudopslag zoals OneDrive of Nextcloud met encryptie.");
     }
-    else if (gevoeligheid === "hoog" && toegang === "team") {
-        if (samenwerking === "ja") {
-            advies = "Gebruik een beveiligde cloudoplossing zoals SharePoint of Nextcloud met toegangsbeheer.";
-        } else {
-            advies = "Gebruik een interne server of een versleutelde netwerkopslag.";
-        }
+    if (gevoeligheid === "hoog" && toegang === "team") {
+        adviezen.push("Voor teamgebruik: gebruik een interne server of een SharePoint-gebaseerde oplossing.");
     }
-    else if (gevoeligheid === "gemiddeld" && toegang === "openbaar") {
-        advies = "Gebruik Google Drive, Dropbox of een publieke cloudoplossing, maar wees voorzichtig met gevoelige gegevens.";
+    if (gevoeligheid === "gemiddeld") {
+        adviezen.push("Voor werkbestanden: een cloudoplossing zoals Google Drive of Dropbox is geschikt.");
     }
-    else if (gevoeligheid === "laag" && grootte === "groot") {
-        advies = "Gebruik een externe harde schijf of een cloudservice met veel opslag zoals Google Drive of OneDrive.";
+    if (gevoeligheid === "laag") {
+        adviezen.push("Voor niet-gevoelige data: gebruik een externe schijf of een goedkope cloudopslag zoals pCloud.");
     }
-    else if (gevoeligheid === "laag" && toegang === "team") {
-        advies = "Gebruik een gedeelde drive zoals SharePoint, Google Drive of een interne netwerkschijf.";
+    if (toegang === "openbaar") {
+        adviezen.push("Voor openbare toegang: Google Drive of een openbare SharePoint-map.");
     }
-    else {
-        advies = "Selecteer opties om een opslagadvies te krijgen.";
+    if (grootte === "groot") {
+        adviezen.push("Voor grote bestanden: gebruik een netwerkschijf, NAS of OneDrive Business met onbeperkte opslag.");
+    }
+    if (samenwerking === "ja") {
+        adviezen.push("Voor samenwerking: een gedeelde drive zoals Google Drive, OneDrive of Nextcloud.");
     }
 
-    adviesText.textContent = advies;
+    // 🔹 If no options were selected, show a default message
+    if (adviezen.length === 0) {
+        adviezen.push("Selecteer minstens één optie om een opslagadvies te krijgen.");
+    }
+
+    // 🔹 Display all matching results as a list
+    adviesText.innerHTML = "<ul><li>" + adviezen.join("</li><li>") + "</li></ul>";
     resultaatDiv.style.display = "block"; }
