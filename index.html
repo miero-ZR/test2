@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opslagwijzer</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Verwijzing naar CSS --> </head> <body>
+    <div class="container">
+        <h2>Opslagwijzer</h2>
+        <p>Beantwoord de vragen en ontvang een opslagadvies.</p>
+
+        <label for="gevoeligheid">Hoe gevoelig zijn de gegevens?</label>
+        <select id="gevoeligheid">
+            <option value="">-- Kies een optie --</option>
+            <option value="hoog">Hoog (bijv. persoonsgegevens, bedrijfsgeheimen)</option>
+            <option value="gemiddeld">Gemiddeld (belangrijke werkbestanden)</option>
+            <option value="laag">Laag (geen vertrouwelijke data)</option>
+        </select>
+
+        <label for="toegang">Wie moet toegang hebben?</label>
+        <select id="toegang">
+            <option value="">-- Kies een optie --</option>
+            <option value="privé">Alleen ik</option>
+            <option value="team">Mijn team</option>
+            <option value="openbaar">Iedereen</option>
+        </select>
+
+        <label for="grootte">Hoeveel opslagruimte heb je nodig?</label>
+        <select id="grootte">
+            <option value="">-- Kies een optie --</option>
+            <option value="klein">Klein (tot 10GB)</option>
+            <option value="middel">Middel (10GB - 1TB)</option>
+            <option value="groot">Groot (meer dan 1TB)</option>
+        </select>
+
+        <label for="samenwerking">Moeten anderen de bestanden kunnen bewerken?</label>
+        <select id="samenwerking">
+            <option value="">-- Kies een optie --</option>
+            <option value="ja">Ja</option>
+            <option value="nee">Nee, alleen lezen</option>
+        </select>
+
+        <button onclick="toonAdvies()">Toon opslagadvies</button>
+
+        <div class="resultaat" id="resultaat">
+            <h3>Advies:</h3>
+            <p id="advies-text"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Verwijzing naar JavaScript --> </body> </html>
