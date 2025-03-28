@@ -20,35 +20,35 @@
         <p>Op basis van jou selectie worden de mogelijke oplossingen getoond.</p>
                 
 
-        <label for="gevoeligheid">Hoe gevoelig zijn de gegevens?</label>
+        <label for="gevoeligheid">Hoe gevoelig de data?</label>
         <select id="gevoeligheid">
             <option value="">-- Kies een optie --</option>
-            <option value="hoog">Hoog (bijv. persoonsgegevens, bedrijfsgeheimen)</option>
-            <option value="gemiddeld">Gemiddeld (belangrijke werkbestanden)</option>
-            <option value="laag">Laag (geen vertrouwelijke data)</option>
+            <option value="hoog">Hoog (bijv. vertrouwelijke gegevens, persoonsgegevens, bedrijfsgeheimen)</option>
+            <option value="gemiddeld">Gemiddeld (belangrijke werkbestanden, enkel toegankelijk voor een speciefe doelgroep)</option>
+            <option value="laag">Laag (geen vertrouwelijke data, publiek beschikbare informatie)</option>
         </select>
 
-        <label for="toegang">Wie moet toegang hebben?</label>
+        <label for="toegang">Il je de data delen met collega's?</label>
         <select id="toegang">
             <option value="">-- Kies een optie --</option>
-            <option value="privé">Alleen ik</option>
-            <option value="team">Mijn team</option>
-            <option value="openbaar">Iedereen</option>
+            <option value="privé">Nee</option>
+            <option value="team">ja, enkel intern</option>
+            <option value="openbaar">ja, zowel intern als extern</option>
         </select>
 
         <label for="grootte">Hoeveel opslagruimte heb je nodig?</label>
         <select id="grootte">
             <option value="">-- Kies een optie --</option>
-            <option value="klein">Klein (tot 10GB)</option>
-            <option value="middel">Middel (10GB - 1TB)</option>
-            <option value="groot">Groot (meer dan 1TB)</option>
+            <option value="klein">klein : < 1TB</option>
+            <option value="middel">Middel : tussen 1 en 5TB)</option>
+            <option value="groot">Groot : meer dan 5TB)</option>
         </select>
 
-        <label for="samenwerking">Moeten anderen de bestanden kunnen bewerken?</label>
+        <label for="samenwerking">Gaat het over actieve data of archief?</label>
         <select id="samenwerking">
             <option value="">-- Kies een optie --</option>
-            <option value="ja">Ja</option>
-            <option value="nee">Nee, alleen lezen</option>
+            <option value="ja">actieve data : regelmatig geraadpleegde, gewijzigde data</option>
+            <option value="nee">archief data : ongewijzigde data, archieven zijn bedoeld voor het langdurig bewaren van gegevens.</option>
         </select>
 
         <button onclick="toonAdvies()">Toon opslagadvies</button>
