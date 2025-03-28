@@ -45,10 +45,10 @@ select, button {
 
 .resultaat {
     margin-top: 20px;
-    padding: 15px;
+    padding: 20px;
     border: 1px solid #ccc;
     background: #eef;
     display: none;
-    border-radius: 5px;
+    border-radius: 15px;
     color: #22385f;
 }
