@@ -28,7 +28,7 @@
             <option value="laag">Laag (geen vertrouwelijke data, publiek beschikbare informatie)</option>
         </select>
 
-        <label for="toegang">Il je de data delen met collega's?</label>
+        <label for="toegang">Wil je de data delen met collega's?</label>
         <select id="toegang">
             <option value="">-- Kies een optie --</option>
             <option value="privé">Nee</option>
@@ -44,14 +44,28 @@
             <option value="groot">Groot : meer dan 5TB)</option>
         </select>
 
-        <label for="samenwerking">Gaat het over actieve data of archief?</label>
+        <label for="archiefatief">Gaat het over actieve data of archief?</label>
         <select id="samenwerking">
             <option value="">-- Kies een optie --</option>
             <option value="ja">actieve data : regelmatig geraadpleegde, gewijzigde data</option>
             <option value="nee">archief data : ongewijzigde data, archieven zijn bedoeld voor het langdurig bewaren van gegevens.</option>
         </select>
 
-        <button onclick="toonAdvies()">Toon opslagadvies</button>
+	<label for="access">Hoe wil je toegang tot je gegevens?</label>
+        <select id="toegang">
+            <option value="">-- Kies een optie --</option>
+            <option value="browser">Via een browser, overal (https)</option>
+            <option value="virtuele-server">Vanaf een Virtuele server</option>
+	    <option value="webinterface">Via een webinterface</option>	
+	    <option value="lokaal">lokaal</option>	
+	    <option value="campus">op campus, via VPN of HTTP commandor</option>	
+	    <option value="BTofO">via browser, Teams of sync via Onedrive client</option>	
+	    <option value="datacenter">Enkel binnen datacenter omgeving</option>	
+	    <option value="uanetwerk">enkel op Uantwerpen netwerk</option>
+	    <option value="netwerk"> Via een Windows netwerkstation</option>
+        </select>    
+
+        <button onclick="toonAdvies()">Toon mogelijkheden</button>
 
         <div class="resultaat" id="resultaat">
             <h3>Advies:</h3>
