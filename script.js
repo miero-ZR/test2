@@ -21,7 +21,7 @@ function toonAdvies() {
             advies = "Gebruik een beveiligde cloudoplossing zoals SharePoint of Nextcloud met toegangsbeheer.";
         } else {
             advies = "Gebruik een interne server of een versleutelde netwerkopslag.";
-            advies = "test meerdere opties"
+            advies = "test meerdere opties";
         }
     }
     else if (gevoeligheid === "gemiddeld" && toegang === "openbaar") {
