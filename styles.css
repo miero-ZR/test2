@@ -19,10 +19,14 @@ h2 {
     text-align: center;
 }
 
+p {
+    text-align: center;
+}
 label {
     font-weight: bold;
     margin-top: 10px;
     display: block;
+    text-align: block;
 }
 
 select, button {
