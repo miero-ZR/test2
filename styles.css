@@ -3,6 +3,8 @@ body {
     font-family: Roboto, Helvetica Neue;
     margin: 20px;
     background-color: #f8f9fa;
+    color: #22385f;
+    
 }
 
 .container {
@@ -18,16 +20,19 @@ body {
 
 h2 {
     text-align: center;
+    color: #22385f;
 }
 
 p {
     text-align: center;
+    color: #22385f;
 }
 label {
     font-weight: bold;
     margin-top: 10px;
     display: block;
     text-align: block;
+    color: #22385f;
 }
 
 select, button {
@@ -35,6 +40,7 @@ select, button {
     padding: 10px;
     margin-top: 5px;
     font-size: 16px;
+    color: #22385f;
 }
 
 .resultaat {
@@ -44,4 +50,5 @@ select, button {
     background: #eef;
     display: none;
     border-radius: 5px;
+    color: #22385f;
 }
